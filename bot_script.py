@@ -180,7 +180,18 @@ if __name__ == '__main__':
         log_msg('save your token in the BOT_TOKEN env variable!', 'error')
         exit(-1)
 
+
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument("--token", help="add bot token")
+args = parser.parse_args()
+if args.token:
+        BOT_TOKEN=args.token
+        bot.run(['BOT_TOKEN'])
+else:
+	bot.run(os.environ['BOT_TOKEN'])
+
     # launch bot (blocking operation)
-    bot.run(os.environ['BOT_TOKEN'])
+	bot.run(os.environ['BOT_TOKEN'])
     
 
