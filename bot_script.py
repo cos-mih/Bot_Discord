@@ -1,4 +1,4 @@
-    #!./.venv/bin/python
+ #!./.venv/bin/python
 
 import discord      # base discord module
 import code         # code.interact
